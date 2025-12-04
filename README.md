@@ -101,5 +101,3 @@ SQLite SQL Engine
 Excel (preprocessing)
 
 GitHub (version control)
-
-GitHub (version control)
