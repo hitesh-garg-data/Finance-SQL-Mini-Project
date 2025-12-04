@@ -1,289 +1,329 @@
-**📘 Finance SQL Mini Project — End-to-End Analysis**
+**📘 FINANCE MINI PROJECT — SQL ANALYSIS**
 
-This project performs financial analytics using SQL, covering revenue, profitability, cost analysis, segmentation, time-series analysis, and advanced SQL patterns (CTEs, joins, window functions, subqueries).
+This project performs a complete SQL-based financial analysis using a real-world style dataset containing revenue, expenses, profit, product sales, and country-level financial performance.
+It includes 22 SQL queries covering:
 
-Dataset: Finance_Data
-Rows: ~700+
-Fields include Revenue, Net Profit, COGS, Operating Expenses, Product, Segment, Country, Year, Month, etc.
+Aggregations
 
-finance_sql_project/
-│── Finance_mini_project.sql
-│── Finance_mini_project.db
-│── Finance_mini_project.csv
-│── Readme_Finance_Mini_Project_SQL.md
-│── screenshots/
-│     ├── Average_Gross_Profit_by_Product.png
-│     ├── Best_Selling_Products_by_Units_Sold.png
-│     ├── Cross_join.png
-│     ├── Derived_table_monthly_product_revenue.png
-│     ├── Expense_banding.png
-│     ├── Expenses_vs_Revenue_breakdown.png
-│     ├── Fresh_Profit_Margin_Calculation.png
-│     ├── Highest_Revenue_Months.png
-│     ├── Inner_join.png
-│     ├── Left_join.png
-│     ├── Month_with_negative_net_profit.png
-│     ├── Per_product_count_revenue.png
-│     ├── Quaterly_aggregation_using_CTE.png
-│     ├── Revenue_and_profit_by_segment.png
-│     ├── Segments_above_avg_revenue.png
-│     ├── Self_join.png
-│     ├── Top_10_Countries_by_Total_Net_Profit.png
-│     ├── Top_10_Most_Profitable_Products.png
-│     ├── Total_Revenue_by_Country.png
-│     ├── Total_Units_Sold_by_Segment.png
-│     ├── Totalrevenue_greater_than_avgrevenue.png
-│     ├── Year_wise_Total_Revenue.png
+Window functions
 
+Joins (INNER, LEFT, CROSS, SELF)
 
-**#️⃣ 1. Project Overview**
+CTEs
 
-This mini-project focuses on end-to-end SQL financial analysis, including:
+Subqueries (IN, HAVING, SELECT, FROM)
 
-✔ Revenue analytics
-✔ Profitability analysis (gross and net)
-✔ Segment & country performance
-✔ Time-series trends (monthly, quarterly, YoY)
-✔ Cost and expense banding
-✔ Advanced SQL patterns (CTEs, joins, correlated subqueries, window functions)
+Profitability analysis
 
-The goal is to simulate real-world finance analytics similar to enterprise BI workflows.
+Time-series breakdowns
 
-**#️⃣ 2. Dataset Description**
+Expense banding
 
-Key fields:
+Month/quarter revenue trends
 
-Segment – Customer segment
+Derived tables
 
-Country – Market
+All queries are executed using SQLite (DB Browser for SQLite).
 
-Product – SKU
+**⭐ 1. Project Overview
+**
 
-Units_Sold – Units sold
+This project analyzes the Finance_Data dataset to understand:
 
-Revenue – Net sales
+Top revenue and profit contributors
 
-Operating_Expenses – Expense fields
+Product performance
 
-Net_Profit – Final profit
+Country-wise financial health
 
-COGS, Discounts, Gross_Profit
+Segment-wise profitability
 
-Year, Month_Number – Time series columns
+Monthly & quarterly revenue trends
 
-**#️⃣ 3. SQL Queries & Insights (Phase 1)**
-🟦 Query 1 — Top 10 Most Profitable Products
-SELECT Product, SUM(Net_Profit) AS Total_Profit
-FROM Sales
-GROUP BY Product
-ORDER BY Total_Profit DESC
-LIMIT 10;
+Expense band classification
 
+Negative profit periods
 
-📸 Screenshot:
+Dataset validation (sanity checks)
 
+The goal is to replicate real analytical workflows commonly used in finance teams.
 
-Insights
+**⭐ 2. Dataset Description**
 
-Paseo leads with the highest total profit.
+Columns used in analysis:
 
-Amarilla & Velo follow with strong profitability.
+Segment
 
-🟦 Query 2 — Total Revenue by Country
-SELECT Country, SUM(Revenue) AS Total_Revenue
-FROM Sales
-GROUP BY Country
-ORDER BY Total_Revenue DESC;
+Country
 
+Product
 
-📸
+Discount_Band
 
+Units_Sold
 
-Insights
+Manufacturing_Price
 
-USA generates the highest revenue but runs at a net loss.
+Sale_Price
 
-Germany & France are the most profitable markets.
+Gross_Sales
 
-🟦 Query 3 — Total Units Sold by Segment
-SELECT Segment, SUM(Units_Sold) AS Total_Units
-FROM Sales
-GROUP BY Segment
-ORDER BY Total_Units DESC;
+Discounts
 
+Net_Sales
 
-📸
+COGS
 
+Gross_Profit
 
-Insights
+Operating_Expenses
 
-Government is the biggest volume driver.
+Other_Income
 
-Enterprise shows high revenue but negative profitability.
+Net_Profit
 
-🟦 Query 4 — Average Gross Profit by Product
+Profit_Margin_%
 
-📸
+Year
 
+Month_Number
 
-Key insight: Amarilla has the highest avg gross profit per unit.
+**⭐ 3. SQL Queries & Insights (Phase 1)**
+Query 1 — Top 10 Most Profitable Products
 
-🟦 Query 5 — Highest Revenue Months
+📎 Screenshot →
+Top_10_Most_Profitable_Products.png
 
-📸
+Insight: Paseo is the strongest overall product in profitability.
 
+Query 2 — Total Revenue by Country
 
-Seasonal trend: Months 10, 12, 6 are peak revenue months.
+📎 Screenshot →
+Total_Revenue_by_Country.png
 
-🟦 Query 6 — Top 10 Countries by Net Profit
+Insight: USA has the highest revenue but negative net profit — high revenue ≠ profitability.
 
-📸
+Query 3 — Total Units Sold by Segment
 
+📎 Screenshot →
+Total_Units_Sold_by_Segment.png
 
-Germany & France show strong net profitability.
+Insight: Government is the largest volume driver.
 
-🟦 Query 7 — Fresh Profit Margin Calculation
+Query 4 — Average Gross Profit by Product
 
-📸
+📎 Screenshot →
+Average_Gross_Profit_by_Product.png
 
+Insight: Amarilla yields the highest gross profit per unit.
 
-Profit margins vary heavily:
+Query 5 — Highest Revenue Months
 
-Highest: Amarilla (~3.27%)
+📎 Screenshot →
+Highest_Revenue_Months.png
 
-Lowest: Velo (~0.66%)
+Insight: 2014 Month 10, 12, and 6 are revenue peaks.
 
-🟦 Query 8 — Expenses vs Revenue
+Query 6 — Top 10 Countries by Net Profit
 
-📸
+📎 Screenshot →
+Top_10_Countries_by_Total_Net_Profit.png
 
+Insight: Germany & France outperform USA in profit.
 
-USA has highest revenue + highest expenses → net negative.
+Query 7 — Fresh Profit Margin Calculation
 
-🟦 Query 9 — Year-wise Total Revenue
+📎 Screenshot →
+Fresh_Profit_Margin_Calculation.png
 
-📸
+Insight: Amarilla has the highest margin; Velo the lowest.
 
+Query 8 — Expenses vs Revenue Breakdown
 
-Clear YoY revenue growth.
+📎 Screenshot →
+Expenses_vs_Revenue_breakdown.png
 
-🟦 Query 10 — Best Selling Products (Units)
+Insight: USA has extremely high expenses — major cause of negative profitability.
 
-📸
+Query 9 — Year-Wise Total Revenue
 
+📎 Screenshot →
+Year_wise_Total_Revenue.png
 
-Paseo dominates in both units and profit.
+Insight: Revenue consistently increases YoY.
 
-**#️⃣ 4. SQL Queries & Insights (Phase 2)**
-🟩 Query — Revenue & Profit by Segment
+Query 10 — Best Selling Products (Units Sold)
 
-📸
+📎 Screenshot →
+Best_Selling_Products_by_Units_Sold.png
 
+Insight: Paseo again leads in units sold.
 
-Insights:
+**⭐ 4. SQL Queries & Insights (Phase 2)**
+Query — Revenue & Profit by Segment
 
-Small Business: high revenue, negative profit → pricing/cost issue.
+📎 Screenshot →
+Revenue_and_profit_by_segment.png
 
-Government: strongest revenue + profit.
+Insight:
 
-Channel Partners: high margin efficiency.
+Government is strongest in both revenue & profit
 
-🟩 Quarterly Aggregation (CTE)
+Enterprise: high revenue but negative profit
 
-📸
+Channel Partners: small but high margin
 
+Query — Quarterly Revenue via CTE
 
-Insights:
+📎 Screenshot →
+Quaterly_aggregation_using_CTE.png
 
-Q3 & Q4 outperform Q1 & Q2.
+Insight: Revenue spikes in Q3 & Q4; Q1 is weakest.
 
-Clear seasonal growth patterns.
+Query — Expense Banding
 
-🟩 Expense Banding (CASE)
+📎 Screenshot →
+Expense_banding.png
 
-📸
+Insight:
 
+Canada = High expense band
 
-Insights:
+USA & France = Medium
 
-Canada → High expense band
+Germany & Mexico = Low
 
-Germany & Mexico → Lean operations
+Query — Months with Negative Net Profit
 
-🟩 Months with Negative Net Profit
+📎 Screenshot →
+Month_with_negative_net_profit.png
 
-📸
-
-
-Insights:
-
-Only 4 month-year combinations show losses.
-
+Insight:
 November is the only month with losses in both years.
 
-**#️⃣ 5. SQL Queries & Insights (Phase 3 — Advanced SQL)**
-🟨 CROSS JOIN
+**⭐ 5. SQL Queries & Insights (Phase 3)**
 
-📸
+(Join operations, derived tables, subqueries)
 
+CROSS JOIN — Customers × Orders
 
-🟨 INNER JOIN
+📎 Screenshot →
+Cross_join.png
 
-📸
+Insight: Demonstrates Cartesian explosion; not used in analytics.
 
+INNER JOIN — Customers With Orders
 
-🟨 LEFT JOIN
+📎 Screenshot →
+Inner_join.png
 
-📸
+Insight: Shows only active customers.
 
+LEFT JOIN — All Customers, Including Non-Ordering
 
-🟨 SELF JOIN
+📎 Screenshot →
+Left_join.png
 
-📸
+Insight: Identifies inactive customers.
 
+SELF JOIN — Customers in the Same City
 
-🟨 Derived Table — Monthly Revenue > 200K
+📎 Screenshot →
+Self_join.png
 
-📸
+Insight: Helps find potential referral/cluster patterns.
 
+Derived Table — Monthly Product Revenue > 200k
 
-🟨 Correlated Subquery — Per Product Revenue
+📎 Screenshot →
+Derived_table_monthly_product_revenue.png
 
-📸
+Insight: Highlights high-spike product-month combinations.
 
+Per-Product Transaction Count & Revenue
 
-🟨 HAVING Subquery — Segments Above Avg Revenue
+📎 Screenshot →
+Per_product_count_revenue.png
 
-📸
+Insight: Paseo leads in both transactions & revenue.
 
+Segments Above Average Revenue (HAVING + Subquery)
 
-🟨 Products With Revenue > Avg Product Revenue
+📎 Screenshot →
+Segments_above_avg_revenue.png
 
-📸
+Segments Selling Above-Average Products
 
+📎 Screenshot →
+Totalrevenue_greater_than_avgrevenue.png
 
-**#️⃣ 6. Dataset Dictionary**
+**⭐ 6. Key Business Insights (Combined)**
+✔ Government is the top-performing segment in both revenue and profit
+✔ USA has highest revenue but negative net profit
+✔ Germany & France deliver strong margins
+✔ Paseo dominates both profit and units sold
+✔ Amarilla has the highest gross profit per unit
+✔ Q3 & Q4 outperform other quarters consistently
+✔ November appears as a repeated loss month
+✔ Expense structure varies drastically by country
+**⭐ 7. SQL Concepts Used**
 
-(Already prepared — keeping your version.)
+SUM(), AVG(), COUNT()
 
-**#️⃣ 7. SQL Concepts Used**
+GROUP BY, ORDER BY, LIMIT
 
-✔ GROUP BY, ORDER BY, LIMIT
-✔ CTEs
-✔ Window functions (RANK, cumulative %)
-✔ CASE statements
-✔ Derived tables
-✔ Correlated subqueries
-✔ Joins (CROSS, INNER, LEFT, SELF)
-✔ Data validation checks
-✔ Time-series analytics (monthly, quarterly, YoY)
+CASE WHEN
 
-**#️⃣ 8. Tools Used**
+HAVING
+
+CTE (WITH clause)
+
+INNER JOIN, LEFT JOIN, CROSS JOIN, SELF JOIN
+
+Derived tables
+
+Correlated subqueries
+
+Window functions
+
+Data validation & sanity checks
+
+**⭐ 8. Tools Used**
 
 DB Browser for SQLite
 
-Excel for preprocessing
+Excel
 
-GitHub for versioning
+GitHub
 
-Notion for documentation
+VS Code / SQL Editor
+
+**⭐ 9. Project Files**
+
+Finance_Mini_Project_SQL/
+│── Finance_mini_project.sql
+│── Finance_data.csv
+│── Finance_data.db
+│── screenshots/
+│    ├── Average_Gross_Profit_by_Product.png
+│    ├── Best_Selling_Products_by_Units_Sold.png
+│    ├── Cross_join.png
+│    ├── Derived_table_monthly_product_revenue.png
+│    ├── Expense_banding.png
+│    ├── Expenses_vs_Revenue_breakdown.png
+│    ├── Fresh_Profit_Margin_Calculation.png
+│    ├── Highest_Revenue_Months.png
+│    ├── Inner_join.png
+│    ├── Left_join.png
+│    ├── Month_with_negative_net_profit.png
+│    ├── Per_product_count_revenue.png
+│    ├── Quaterly_aggregation_using_CTE.png
+│    ├── Revenue_and_profit_by_segment.png
+│    ├── Segments_above_avg_revenue.png
+│    ├── Self_join.png
+│    ├── Top_10_Countries_by_Total_Net_Profit.png
+│    ├── Top_10_Most_Profitable_Products.png
+│    ├── Total_Revenue_by_Country.png
+│    ├── Total_Units_Sold_by_Segment.png
+│    ├── Totalrevenue_greater_than_avgrevenue.png
+│    ├── Year_wise_Total_Revenue.png
