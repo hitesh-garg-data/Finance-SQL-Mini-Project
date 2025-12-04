@@ -1,4 +1,4 @@
-📘 Finance SQL Mini Project — End-to-End Analysis
+**📘 Finance SQL Mini Project — End-to-End Analysis**
 
 This project performs financial analytics using SQL, covering revenue, profitability, cost analysis, segmentation, time-series analysis, and advanced SQL patterns (CTEs, joins, window functions, subqueries).
 
@@ -6,7 +6,6 @@ Dataset: Finance_Data
 Rows: ~700+
 Fields include Revenue, Net Profit, COGS, Operating Expenses, Product, Segment, Country, Year, Month, etc.
 
-🗂 Folder Structure
 finance_sql_project/
 │── Finance_mini_project.sql
 │── Finance_mini_project.db
@@ -36,7 +35,8 @@ finance_sql_project/
 │     ├── Totalrevenue_greater_than_avgrevenue.png
 │     ├── Year_wise_Total_Revenue.png
 
-#️⃣ 1. Project Overview
+
+**#️⃣ 1. Project Overview**
 
 This mini-project focuses on end-to-end SQL financial analysis, including:
 
@@ -49,7 +49,7 @@ This mini-project focuses on end-to-end SQL financial analysis, including:
 
 The goal is to simulate real-world finance analytics similar to enterprise BI workflows.
 
-#️⃣ 2. Dataset Description
+**#️⃣ 2. Dataset Description**
 
 Key fields:
 
@@ -71,7 +71,7 @@ COGS, Discounts, Gross_Profit
 
 Year, Month_Number – Time series columns
 
-#️⃣ 3. SQL Queries & Insights (Phase 1)
+**#️⃣ 3. SQL Queries & Insights (Phase 1)**
 🟦 Query 1 — Top 10 Most Profitable Products
 SELECT Product, SUM(Net_Profit) AS Total_Profit
 FROM Sales
@@ -174,7 +174,7 @@ Clear YoY revenue growth.
 
 Paseo dominates in both units and profit.
 
-#️⃣ 4. SQL Queries & Insights (Phase 2)
+**#️⃣ 4. SQL Queries & Insights (Phase 2)**
 🟩 Query — Revenue & Profit by Segment
 
 📸
@@ -221,7 +221,7 @@ Only 4 month-year combinations show losses.
 
 November is the only month with losses in both years.
 
-#️⃣ 5. SQL Queries & Insights (Phase 3 — Advanced SQL)
+**#️⃣ 5. SQL Queries & Insights (Phase 3 — Advanced SQL)**
 🟨 CROSS JOIN
 
 📸
@@ -262,11 +262,11 @@ November is the only month with losses in both years.
 📸
 
 
-#️⃣ 6. Dataset Dictionary
+**#️⃣ 6. Dataset Dictionary**
 
 (Already prepared — keeping your version.)
 
-#️⃣ 7. SQL Concepts Used
+**#️⃣ 7. SQL Concepts Used**
 
 ✔ GROUP BY, ORDER BY, LIMIT
 ✔ CTEs
@@ -278,7 +278,7 @@ November is the only month with losses in both years.
 ✔ Data validation checks
 ✔ Time-series analytics (monthly, quarterly, YoY)
 
-#️⃣ 8. Tools Used
+**#️⃣ 8. Tools Used**
 
 DB Browser for SQLite
 
