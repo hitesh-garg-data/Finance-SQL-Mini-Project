@@ -5,7 +5,7 @@ It includes 22 SQL queries covering profitability analysis, revenue trends, segm
 
 Full details (SQL logic + comments) are available inside the .sql file and the extended markdown documentation.
 
-⭐ 1. Project Overview
+⭐ **1. Project Overview**
 
 Analyzed financial dataset using SQL (Revenue, Net Profit, Expenses, Units Sold).
 
