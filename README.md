@@ -1,4 +1,4 @@
-📘 Finance SQL Mini Project — Analysis Summary
+📘 **Finance SQL Mini Project — Analysis Summary**
 
 This project performs a structured financial analysis using SQL on the Finance_Data dataset.
 It includes 22 SQL queries covering profitability analysis, revenue trends, segmentation insights, expense evaluation, and dataset validation.
@@ -17,16 +17,19 @@ Used joins, window functions, subqueries, CASE logic, and sanity checks.
 
 Created insights for business decisions and profitability improvement.
 
-📄 Detailed analysis:
+📄 **Detailed analysis**:
 Readme_Finance_Mini_Project_SQL.md
+https://github.com/hitesh-garg-data/Finance-SQL-Mini-Project/blob/main/finance_sql_project/Readme_Finance_Mini_Project_SQL.md
 
-🧠 Full SQL logic + commented queries:
+
+🧠 **Full SQL logic + commented queries:**
 Finance_mini_project.sql
+https://github.com/hitesh-garg-data/Finance-SQL-Mini-Project/blob/main/finance_sql_project/Finance_mini_project.sql
 
-📸 All 22 screenshots:
+📸 **All 22 screenshots:**
 Located in /screenshots/ folder.
 
-⭐ 2. Key Insights
+⭐ **2. Key Insights**
 ✔ Product Insights
 
 Paseo ranks #1 in both total profit and units sold.
@@ -61,7 +64,7 @@ Canada classified as High-expense country.
 
 Germany & Mexico classified as Low-expense countries.
 
-⭐ 3. SQL Concepts Used
+**⭐ 3. SQL Concepts Used**
 
 Aggregations: SUM, AVG, COUNT, ROUND
 
@@ -81,7 +84,7 @@ CASE statements: expense banding
 
 Data validation: consistency check between computed and actual profit
 
-⭐ 4. Project Files
+**⭐ 4. Project Files**
 Finance_SQL_Mini_Project/
 │── Finance_mini_project.sql            <-- Full SQL with comments + all queries
 │── Finance_data.csv
@@ -89,12 +92,14 @@ Finance_SQL_Mini_Project/
 │── Readme_Finance_Mini_Project_SQL.md  <-- Full narrative analysis
 │── screenshots/                        <-- 22 query result screenshots
 
-⭐ 5. Tools Used
+**⭐ 5. Tools Used**
 
 DB Browser for SQLite
 
 SQLite SQL Engine
 
 Excel (preprocessing)
+
+GitHub (version control)
 
 GitHub (version control)
