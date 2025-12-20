@@ -102,4 +102,4 @@ Excel (preprocessing)
 
 GitHub (version control)
 
-**Note:** Some aggregate query screenshots may show a NULL row due to an Excel “Total Row” being present in the source table during early preprocessing. This was identified as a data hygiene issue and does not affect the SQL logic or analytical conclusions.
+**Note:** Some aggregate query screenshots may show a NULL row due to an Excel table “Total Row” being included in the source data during early preprocessing and later exported to CSV. This was identified as a data hygiene issue and does not affect the SQL logic or analytical conclusions.
