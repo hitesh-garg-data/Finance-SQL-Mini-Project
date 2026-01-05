@@ -1,4 +1,5 @@
 📘 **Finance SQL Mini Project — Analysis Summary**
+Designed to demonstrate SQL skills for Data Analyst / Finance Analyst roles.
 
 This project performs a structured financial analysis using SQL on the Finance_Data dataset.
 It includes 22 SQL queries covering profitability analysis, revenue trends, segmentation insights, expense evaluation, and dataset validation.
@@ -30,19 +31,19 @@ https://github.com/hitesh-garg-data/Finance-SQL-Mini-Project/blob/main/finance_s
 Located in /screenshots/ folder.
 
 ⭐ **2. Key Insights**
-✔ Product Insights
+→ Product Insights
 
 Paseo ranks #1 in both total profit and units sold.
 
 Amarilla delivers the highest profit margin per unit.
 
-✔ Country Insights
+→ Country Insights
 
 USA has the highest revenue but negative net profit → high operational expenses.
 
 Germany & France are the most profitable regions.
 
-✔ Segment Insights
+→ Segment Insights
 
 Government segment performs best in both revenue & profitability.
 
@@ -50,7 +51,7 @@ Enterprise segment shows high revenue but negative profit.
 
 Channel Partners → low volume but high margins.
 
-✔ Time-Series Insights
+→ Time-Series Insights
 
 Revenue peaks in Months 10, 12, and 6 of 2014.
 
@@ -58,7 +59,7 @@ Q3 and Q4 consistently outperform earlier quarters.
 
 November shows losses in both years.
 
-✔ Expense Banding
+→ Expense Banding
 
 Canada classified as High-expense country.
 
