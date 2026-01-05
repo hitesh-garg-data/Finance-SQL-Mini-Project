@@ -8,15 +8,12 @@ Full details (SQL logic + comments) are available inside the .sql file and the e
 
 ⭐ **1. Project Overview**
 
-Analyzed financial dataset using SQL (Revenue, Net Profit, Expenses, Units Sold).
+- Analyzed financial dataset using SQL (Revenue, Net Profit, Expenses, Units Sold)
+- Identified top products, profitable countries, and high-performing segments
+- Explored monthly & quarterly revenue patterns using CTEs
+- Used joins, window functions, subqueries, CASE logic, and sanity checks
+- Created insights for business decisions and profitability improvement
 
-Identified top products, profitable countries, and high-performing segments.
-
-Explored monthly & quarterly revenue patterns using CTEs.
-
-Used joins, window functions, subqueries, CASE logic, and sanity checks.
-
-Created insights for business decisions and profitability improvement.
 
 📄 **Detailed analysis**:
 Readme_Finance_Mini_Project_SQL.md
@@ -31,59 +28,39 @@ https://github.com/hitesh-garg-data/Finance-SQL-Mini-Project/blob/main/finance_s
 Located in /screenshots/ folder.
 
 ⭐ **2. Key Insights**
-→ Product Insights
+### Product Insights
+- Paseo ranks #1 in both total profit and units sold.
+- Amarilla delivers the highest profit margin per unit.
 
-Paseo ranks #1 in both total profit and units sold.
+### Country Insights
+- USA has the highest revenue but negative net profit → high operational expenses.
+- Germany & France are the most profitable regions.
 
-Amarilla delivers the highest profit margin per unit.
+### Segment Insights
+- Government segment performs best in both revenue & profitability.
+- Enterprise segment shows high revenue but negative profit.
+- Channel Partners → low volume but high margins.
 
-→ Country Insights
+### Time-Series Insights
+- Revenue peaks in Months 10, 12, and 6 of 2014.
+- Q3 and Q4 consistently outperform earlier quarters.
+- November shows losses in both years.
 
-USA has the highest revenue but negative net profit → high operational expenses.
-
-Germany & France are the most profitable regions.
-
-→ Segment Insights
-
-Government segment performs best in both revenue & profitability.
-
-Enterprise segment shows high revenue but negative profit.
-
-Channel Partners → low volume but high margins.
-
-→ Time-Series Insights
-
-Revenue peaks in Months 10, 12, and 6 of 2014.
-
-Q3 and Q4 consistently outperform earlier quarters.
-
-November shows losses in both years.
-
-→ Expense Banding
-
-Canada classified as High-expense country.
-
-Germany & Mexico classified as Low-expense countries.
+### Expense Banding
+- Canada classified as High-expense country.
+- Germany & Mexico classified as Low-expense countries.
 
 **⭐ 3. SQL Concepts Used**
 
-Aggregations: SUM, AVG, COUNT, ROUND
-
-Grouping & Sorting: GROUP BY, ORDER BY, LIMIT
-
-Filtering: WHERE, HAVING
-
-JOINs: INNER, LEFT, CROSS, SELF
-
-CTEs: WITH clause for quarterly revenue and summary tables
-
-Window functions: RANK() for product ranking
-
-Subqueries: correlated, derived, HAVING subqueries
-
-CASE statements: expense banding
-
-Data validation: consistency check between computed and actual profit
+- Aggregations: SUM, AVG, COUNT, ROUND
+- Grouping & Sorting: GROUP BY, ORDER BY, LIMIT
+- Filtering: WHERE, HAVING
+- JOINs: INNER, LEFT, CROSS, SELF
+- CTEs: WITH clause for quarterly revenue and summary tables
+- Window functions: RANK() for product ranking
+- Subqueries: correlated, derived, HAVING subqueries
+- CASE statements: expense banding
+- Data validation: consistency check between computed and actual profit
 
 **⭐ 4. Project Files**
 Finance_SQL_Mini_Project/
@@ -95,12 +72,9 @@ Finance_SQL_Mini_Project/
 
 **⭐ 5. Tools Used**
 
-DB Browser for SQLite
-
-SQLite SQL Engine
-
-Excel (preprocessing)
-
-GitHub (version control)
+- DB Browser for SQLite
+- SQLite SQL Engine
+- Excel (preprocessing)
+- GitHub (version control)
 
 **Note:** Some aggregate query screenshots may show a NULL row due to an Excel table “Total Row” being included in the source data during early preprocessing and later exported to CSV. This was identified as a data hygiene issue and does not affect the SQL logic or analytical conclusions.
