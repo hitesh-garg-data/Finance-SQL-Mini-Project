@@ -62,13 +62,6 @@ Located in /screenshots/ folder.
 - CASE statements: expense banding
 - Data validation: consistency check between computed and actual profit
 
-**⭐ 4. Project Files**
-Finance_SQL_Mini_Project/
-│── Finance_mini_project.sql            <-- Full SQL with comments + all queries
-│── Finance_data.csv
-│── Finance_data.db
-│── Readme_Finance_Mini_Project_SQL.md  <-- Full narrative analysis
-│── screenshots/                        <-- 22 query result screenshots
 
 **⭐ 4. Project Files**
 
@@ -80,6 +73,7 @@ Finance_SQL_Mini_Project/
 ├── Readme_Finance_Mini_Project_SQL.md  # Full narrative analysis
 └── screenshots/                        # 22 query result screenshots
 
+```
 **⭐ 5. Tools Used**
 
 - DB Browser for SQLite
