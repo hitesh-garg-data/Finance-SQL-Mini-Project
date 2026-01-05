@@ -1,7 +1,7 @@
 -- Finance_Mini_Project.sql
 -- Consolidated SQL workbook for Finance + Retail mini-project
 -- Author: Hitesh Garg
--- Date: dec 2025
+-- Date: Dec 2025
 -- Notes: Replace table names if your DB uses different names.
 
 -- ============================================================
@@ -288,3 +288,4 @@ ORDER BY Year, Month_Number;
 -- END OF FILE
 -- Save screenshots for each section and reference them in README.md
 -- ============================================================
+
