@@ -286,6 +286,7 @@ ORDER BY Year, Month_Number;
 
 -- ============================================================
 -- END OF FILE
--- Save screenshots for each section and reference them in README.md
+-- Screenshots and explanations are documented in README.md
 -- ============================================================
+
 
