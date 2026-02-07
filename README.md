@@ -1,33 +1,44 @@
-📘 **Finance SQL Mini Project — Analysis Summary**
-Designed to demonstrate SQL skills for Data Analyst / Finance Analyst roles.
+# 📘 Finance Performance Analysis (SQL)
+
+SQL-based financial analysis used to validate profitability, cost structure, and segment-level performance across products, countries, and time.
 
 This project performs a structured financial analysis using SQL on the Finance_Data dataset.
 It includes 22 SQL queries covering profitability analysis, revenue trends, segmentation insights, expense evaluation, and dataset validation.
-
 Full details (SQL logic + comments) are available inside the .sql file and the extended markdown documentation.
 
-⭐ **1. Project Overview**
+---
+## 🎯 Decision Context
+This analysis supports validation of financial metrics and identification of profitability risks, helping decision-makers understand where revenue strength is undermined by cost structure, expense intensity, or segment-level inefficiencies.
+
+---
+## 🚫 Scope & Limitations
+This SQL analysis is based on historical data and descriptive financial metrics.  
+It does not perform forecasting, scenario modeling, or prescriptive decision-making.
+
+---
+
+**⭐ 1.Project Overview**
 
 - Analyzed financial dataset using SQL (Revenue, Net Profit, Expenses, Units Sold)
 - Identified top products, profitable countries, and high-performing segments
 - Explored monthly & quarterly revenue patterns using CTEs
 - Used joins, window functions, subqueries, CASE logic, and sanity checks
-- Created insights for business decisions and profitability improvement
+- Identified patterns and risk areas relevant to profitability and cost control
 
 
-📄 **Detailed analysis**:
+### 📄 Detailed analysis:
 Readme_Finance_Mini_Project_SQL.md
 https://github.com/hitesh-garg-data/Finance-SQL-Mini-Project/blob/main/finance_sql_project/Readme_Finance_Mini_Project_SQL.md
 
 
-🧠 **Full SQL logic + commented queries:**
+### 🧠 Full SQL logic + commented queries:
 Finance_mini_project.sql
 https://github.com/hitesh-garg-data/Finance-SQL-Mini-Project/blob/main/finance_sql_project/Finance_mini_project.sql
 
-📸 **All 22 screenshots:**
+### 📸 All 22 screenshots:
 Located in /screenshots/ folder.
 
-⭐ **2. Key Insights**
+**⭐ 2. Observations & Analytical Findings**
 ### Product Insights
 - Paseo ranks #1 in both total profit and units sold.
 - Amarilla delivers the highest profit margin per unit.
@@ -50,7 +61,7 @@ Located in /screenshots/ folder.
 - Canada classified as High-expense country.
 - Germany & Mexico classified as Low-expense countries.
 
-**⭐ 3. SQL Concepts Used**
+**⭐ 3. Analytical SQL Techniques Used**
 
 - Aggregations: SUM, AVG, COUNT, ROUND
 - Grouping & Sorting: GROUP BY, ORDER BY, LIMIT
@@ -77,7 +88,12 @@ Finance_SQL_Mini_Project/
 
 - DB Browser for SQLite
 - SQLite SQL Engine
-- Excel (preprocessing)
+- Excel (data preparation & validation)
 - GitHub (version control)
 
 **Note:** Some aggregate query screenshots may show a NULL row due to an Excel table “Total Row” being included in the source data during early preprocessing and later exported to CSV. This was identified as a data hygiene issue and does not affect the SQL logic or analytical conclusions.
+
+---
+## ⭐ Created by  
+**Hitesh Garg**  
+Finance & Business Data Analyst
